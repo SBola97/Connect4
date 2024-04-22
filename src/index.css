@@ -1,0 +1,164 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.board{
+  width: fit-content;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.board h1 {
+  font-size: 3em;
+  line-height: 1.1;
+  color: #eee;
+  margin-bottom: 1rem;
+}
+.board h1 span{
+  font-size: 1.5em;
+  font-weight: 800;
+  font-style: italic;
+  color:#E72929;
+}
+
+.board .game{
+  display: grid;
+  border: 5px solid #0b5394;
+  border-radius: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(7,1fr);
+  gap: 10px;
+}
+
+.cell{
+  width: 6.25rem;
+  height: 6.25rem;
+  border: 2px solid #0b5394;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  font-size: 4.2rem;
+}
+
+
+.turn{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5rem;
+  margin: 15px auto;
+  width: fit-content;
+  border: 2px solid #0b5394;
+  border-radius: 10px;
+  font-size: 3rem;
+}
+
+.turn p{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.winner {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.winner .text {
+  background: #111;
+  height: 300px;
+  width: 320px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.winner .win {
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid #eee;
+  font-size: 3.5rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+button{
+  width: auto;
+  padding: 0.5rem;
+  margin: 1rem;
+  background: transparent;
+  border: 2px solid #eee;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #eee;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #eee;
+  color: #222;
+}
+
+.footerg{
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  background-color: #222;
+  border-radius: 1rem;
+}
+
+.footerg p{
+  text-align: center;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.footerg svg{
+  float: right;
+  color:#0b5394;
+}
